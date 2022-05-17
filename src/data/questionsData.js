@@ -19,6 +19,8 @@ const questionsData = [
           { id: uuid(), option: "Kurt Cobain" },
           { id: uuid(), option: "Bon jovi" },
         ],
+        number: "1",
+        points: 2,
         answer: "Kurt Cobain",
       },
       {
@@ -30,6 +32,8 @@ const questionsData = [
           { id: uuid(), option: "Edwrad Nashton" },
           { id: uuid(), option: "Edward Enigma" },
         ],
+        number: "2",
+        points: 2,
         answer: "Edwrad Nashton",
       },
       {
@@ -42,6 +46,8 @@ const questionsData = [
           { id: uuid(), option: "Gil Colson" },
           { id: uuid(), option: "Falcone" },
         ],
+        number: "3",
+        points: 2,
         answer: "Don Michell jr.",
       },
       {
@@ -53,6 +59,8 @@ const questionsData = [
           { id: uuid(), option: "Edward Nashton" },
           { id: uuid(), option: "Penguin" },
         ],
+        number: "4",
+        points: 2,
         answer: "Falcone",
       },
       {
@@ -64,6 +72,8 @@ const questionsData = [
           { id: uuid(), option: "Jennifer" },
           { id: uuid(), option: "Ellie" },
         ],
+        number: "5",
+        points: 2,
         answer: "Annika Koslov",
       },
     ],
@@ -86,6 +96,8 @@ const questionsData = [
           { id: uuid(), option: "A moped" },
           { id: uuid(), option: "A Garbage truck" },
         ],
+        number: "1",
+        points: 2,
         answer: "A school bus",
       },
       {
@@ -97,6 +109,8 @@ const questionsData = [
           { id: uuid(), option: "Shanghai" },
           { id: uuid(), option: "Tokyo" },
         ],
+        number: "2",
+        points: 2,
         answer: "Hong Kong",
       },
       {
@@ -108,6 +122,8 @@ const questionsData = [
           { id: uuid(), option: "Rachel gave it to him" },
           { id: uuid(), option: "He created it" },
         ],
+        number: "3",
+        points: 2,
         answer: "His father gave it to him",
       },
       {
@@ -119,6 +135,8 @@ const questionsData = [
           { id: uuid(), option: "Gotham's well with Harvey Dent" },
           { id: uuid(), option: "I believe in Harvey Dent" },
         ],
+        number: "4",
+        points: 2,
         answer: "I believe in Harvey Dent",
       },
       {
@@ -130,6 +148,8 @@ const questionsData = [
           { id: uuid(), option: "The Bruiser" },
           { id: uuid(), option: "The Destroyer" },
         ],
+        number: "5",
+        points: 2,
         answer: "The Tumbler",
       },
     ],
@@ -152,6 +172,8 @@ const questionsData = [
           { id: uuid(), option: "Death" },
           { id: uuid(), option: "Vengeance" },
         ],
+        number: "1",
+        points: 2,
         answer: "Rise",
       },
       {
@@ -163,6 +185,8 @@ const questionsData = [
           { id: uuid(), option: "Dr. Mellish" },
           { id: uuid(), option: "Dr. Volkov" },
         ],
+        number: "2",
+        points: 2,
         answer: "Dr. Pavel",
       },
       {
@@ -174,6 +198,8 @@ const questionsData = [
           { id: uuid(), option: "France" },
           { id: uuid(), option: "England" },
         ],
+        number: "3",
+        points: 2,
         answer: "Italy",
       },
       {
@@ -185,6 +211,8 @@ const questionsData = [
           { id: uuid(), option: "Harvey Dent" },
           { id: uuid(), option: "Lucius Fox" },
         ],
+        number: "4",
+        points: 2,
         answer: "Raas al ghul",
       },
       {
@@ -197,6 +225,8 @@ const questionsData = [
           { id: uuid(), option: "John Bennett" },
           { id: uuid(), option: "Raas al ghul" },
         ],
+        number: "5",
+        points: 2,
         answer: "Talia",
       },
     ],

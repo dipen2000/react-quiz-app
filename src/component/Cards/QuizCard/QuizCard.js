@@ -13,7 +13,7 @@ const QuizCard = ({ question }) => {
             <RadioInputField
               key={optionObj.id}
               option={optionObj}
-              name={question.id}
+              number={question.number}
             />
           );
         })}

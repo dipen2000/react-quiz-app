@@ -1,5 +1,5 @@
 import { createContext, useContext, useState } from "react";
-import { questionsData } from "../../data/questionsData";
+import { questionsData } from "../data/questionsData";
 
 const QuestionsContext = createContext();
 

@@ -1,12 +1,15 @@
 import "./Quiz.css";
 import { BatmanQuizContainer } from "../../component/Wrapper/BatmanQuizContainer/BatmanQuizContainer";
 import { useParams } from "react-router-dom";
-import { QuizCard } from "../../component/Cards/QuizCard/QuizCard";
-import { useQuestions } from "../../context/QuestionsContext/QuestionsContext";
+import { QuizCard } from "../../component/Cards";
+import { useQuestions } from "../../context/QuestionsContext";
+import { useAnswers } from "../../context/answersContext";
+import { useNavigate } from "react-router-dom";
 const Quiz = () => {
   const { categoryName } = useParams();
   const { questionsState } = useQuestions();
-
+  const { answerState } = useAnswers();
+  const navigate = useNavigate();
   const quizCategoryObj = questionsState.find(
     (category) => category.categoryName === categoryName
   );
@@ -14,7 +17,9 @@ const Quiz = () => {
   const questions = quizCategoryObj.questions;
   const quizSubmitHandler = (e) => {
     e.preventDefault();
+    navigate("/result");
   };
+
   return (
     <BatmanQuizContainer>
       <div className="flex-col bord-3-green gap-1">
