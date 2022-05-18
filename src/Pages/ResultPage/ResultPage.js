@@ -43,8 +43,21 @@ const ResultPage = () => {
             return <AnswerCard key={question.id} question={question} />;
           })}
         </div>
-        <div className="flex-row justify-center-flex align-center-flex">
+        <div className="flex-row justify-center-flex align-center-flex gap-2">
           <button onClick={playAgainHandler}>Play again</button>
+          <button>
+            <a
+              target="_blank"
+              rel="noreferrer"
+              href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
+                `Hey 👋 everyone, I scored ${totalPoints} out of 10 on the ${category} quiz.
+              
+Let's see how much you will score? Play today styling is yet to be done 😅 it is in the deploy...`
+              )}&url=${encodeURIComponent("testing")}&via=DipenChavda2`}
+            >
+              Share on twitter
+            </a>
+          </button>
         </div>
       </div>
     </BatmanQuizContainer>
