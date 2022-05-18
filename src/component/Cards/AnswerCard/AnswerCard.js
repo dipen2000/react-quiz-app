@@ -10,13 +10,24 @@ const AnswerCard = ({ question }) => {
         <div className="flex-row align-center-flex gap-1">
           <div className="flex-row align-center-flex gap-1">
             <span>Right answer : </span>
-            <span className="answer-container bord-3-blue">
+            <span
+              style={{ backgroundColor: "green" }}
+              className="answer-container bord-3-blue"
+            >
               {question.answer}
             </span>
           </div>
           <div className="flex-row align-center-flex gap-1">
             <span>Your answer : </span>
-            <span className="answer-container bord-3-blue">
+            <span
+              style={{
+                backgroundColor:
+                  question.answer === answerState[question.number]
+                    ? "green"
+                    : "red",
+              }}
+              className="answer-container bord-3-blue"
+            >
               {answerState[question.number]}
             </span>
           </div>
