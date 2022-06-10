@@ -2,12 +2,17 @@
     padding : 1rem;
     width : 60%;
     margin : 0 auto;
+    border-radius: 10px;
+    background-color : var(--post-color);
 }
 
 .solution-section{
     padding : 1rem;
+    border-radius: 10px;
+    background-color : var(--primary-color);
 }
 
 .answer-container{
-    padding : 0.3rem;
+    padding : 0.5rem;
+    border-radius: 10px;
 }

@@ -1,8 +1,16 @@
 .category-thumbnail-container{
     height : 20rem;
+    border-radius: 15px;
+}
+
+.category-thumbnail-container img{
+    border-radius: 15px;
 }
 
 .category-card-container{
     width : 30rem;
     margin : 2rem 0;
+    padding :  1.5rem;
+    border-radius: 15px;
+    background-color: var(--post-color);
 }

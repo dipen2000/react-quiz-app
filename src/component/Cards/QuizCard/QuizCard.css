@@ -1,11 +1,16 @@
 .quiz-card-container{
     padding : 0.5rem;
     width : 70rem;
+    padding : 1.5rem;
+    border-radius: 10px;
+    background-color : var(--post-color);
     /* height : 30rem; */
 }
 
 .quiz-question-container{
     padding : 1rem;
+    background-color : var(--primary-color);
+    border-radius: 10px;
 }
 
 .quiz-option{
@@ -16,6 +21,7 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows : 1fr 1fr;
+    gap : 1rem;
 }
 
 .test{

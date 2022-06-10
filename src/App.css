@@ -1,3 +1,10 @@
+:root{
+  --primary-color : #141213;
+  --post-color : #294842; 
+  --btn-color : #fff001;
+  --general-font-color : white;
+}
+
 .flex-row{
   display : flex;
     flex-direction: row;
@@ -83,4 +90,7 @@
 
 .App{
   font-family: var(--component-heading-font);
+  background-color: var(--primary-color);
+  color : var(--general-font-color);
+  min-height: 100vh;
 }
