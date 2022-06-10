@@ -1,7 +1,7 @@
 .navbar{
-    border : 3px solid black;
+    /* border : 3px solid black; */
     padding : 1rem;
-    background-color : white;
+    background-color : var(--primary-color);
 }
 
 .navbar-sticky{

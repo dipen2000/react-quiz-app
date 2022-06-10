@@ -9,7 +9,7 @@ const RadioInputField = ({ option, number }) => {
     });
   };
   return (
-    <div className="option bord-3-purple flex-row gap-1 align-center-flex">
+    <div className="option flex-row gap-1 align-center-flex">
       <input
         name={number}
         type="radio"

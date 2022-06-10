@@ -11,9 +11,9 @@ const CategoryCard = ({ category }) => {
         setCategory(categoryName);
         navigate(`/category/${categoryName}`);
       }}
-      className="flex-col category-card-container bord-3-blue curs-point"
+      className="flex-col category-card-container  curs-point gap-1"
     >
-      <div className="category-thumbnail-container bord-3-red">
+      <div className="category-thumbnail-container">
         <img className="img-resp" src={imgSrc} alt={`${categoryName} img`} />
       </div>
       <div className="flex-col gap-1">

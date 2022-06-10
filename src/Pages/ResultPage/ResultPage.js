@@ -38,14 +38,17 @@ const ResultPage = () => {
         <div className="flex-row justify-center-flex align-center-flex">
           <h2>Solutions</h2>
         </div>
-        <div className="flex-col bord-3-blue gap-2">
+        <div className="flex-col gap-2">
           {categoryObj.questions.map((question) => {
             return <AnswerCard key={question.id} question={question} />;
           })}
         </div>
         <div className="flex-row justify-center-flex align-center-flex gap-2">
-          <button onClick={playAgainHandler}>Play again</button>
-          <button>
+          <button className="play-again-btn" onClick={playAgainHandler}>
+            Play again
+          </button>
+          <button className="play-again-btn twitter-color flex-row align-center-flex gap-1">
+            <i className="fa-brands fa-twitter"></i>
             <a
               target="_blank"
               rel="noreferrer"

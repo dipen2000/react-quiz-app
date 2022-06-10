@@ -7,7 +7,7 @@ const LandingPage = () => {
   const { questionsState } = useQuestions();
   return (
     <BatmanQuizContainer>
-      <div className="flex-col bord-3-green">
+      <div className="flex-col ">
         <div className="flex-col justify-center-flex align-center-flex quiz-title-text">
           <h2>
             Welcome to the BATMAN quiz, so you think you are a BATMAN fan if yes
@@ -27,7 +27,7 @@ const LandingPage = () => {
           <div className="flex-row align-center-flex justify-center-flex">
             <h2>Categories</h2>
           </div>
-          <div className="bord-3-green categories flex-row ">
+          <div className=" categories flex-row ">
             {questionsState.map((category) => {
               return <CategoryCard key={category.id} category={category} />;
             })}

@@ -22,16 +22,13 @@ const Quiz = () => {
 
   return (
     <BatmanQuizContainer>
-      <div className="flex-col bord-3-green gap-1">
+      <div className="flex-col  gap-1">
         <div className="flex-col bord-3-yellow quiz-title-sticky">
           <div className="quiz-title-container flex-row align-center-flex justify-center-flex">
             <h2>{categoryName} Quiz</h2>
           </div>
-          <div className="flex-row align-center-flex justify-center-flex">
-            <h2>Timer here</h2>
-          </div>
         </div>
-        <div className="quiz-form-container bord-3-blue">
+        <div className="quiz-form-container">
           <form onSubmit={quizSubmitHandler}>
             <div className="flex-col align-center-flex justify-center-flex gap-2">
               {questions.map((question) => {
@@ -39,7 +36,7 @@ const Quiz = () => {
               })}
             </div>
             <div className="flex-row submit-btn-container align-center-flex justify-center-flex">
-              <button>Submit</button>
+              <button className="submit-btn">Submit</button>
             </div>
           </form>
         </div>
