@@ -1,0 +1,13 @@
+.solution-container{
+    padding : 1rem;
+    width : 60%;
+    margin : 0 auto;
+}
+
+.solution-section{
+    padding : 1rem;
+}
+
+.answer-container{
+    padding : 0.3rem;
+}

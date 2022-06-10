@@ -1,3 +1,23 @@
 .quiz-card-container{
     padding : 0.5rem;
+    width : 70rem;
+    /* height : 30rem; */
+}
+
+.quiz-question-container{
+    padding : 1rem;
+}
+
+.quiz-option{
+    padding : 1rem;
+}
+
+.quiz-options-section{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows : 1fr 1fr;
+}
+
+.test{
+    padding : 1rem;
 }

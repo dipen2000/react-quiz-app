@@ -1,11 +1,16 @@
 import "./CategoryCard.css";
 import { useNavigate } from "react-router-dom";
+import { useCategory } from "../../../context/categoryContext";
 const CategoryCard = ({ category }) => {
   const { categoryName, categoryDesc, points, imgSrc } = category;
+  const { setCategory } = useCategory();
   const navigate = useNavigate();
   return (
     <div
-      onClick={() => navigate(`/category/${categoryName}`)}
+      onClick={() => {
+        setCategory(categoryName);
+        navigate(`/category/${categoryName}`);
+      }}
       className="flex-col category-card-container bord-3-blue curs-point"
     >
       <div className="category-thumbnail-container bord-3-red">

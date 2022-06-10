@@ -12,6 +12,10 @@ const rulesData = [
     id: uuid(),
     rule: "To clear the Quiz, you will have to answer all questions correctly",
   },
+  {
+    id: uuid(),
+    rule: "You will need to attempt all the questions.",
+  },
 ];
 
 export { rulesData };

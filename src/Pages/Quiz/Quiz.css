@@ -1,7 +1,19 @@
-.quiz-title-container{
+/* .quiz-title-container{
+    margin-top : 2rem;
+} */
+
+.quiz-form-container{
+    /* margin-top : 2rem; */
+}
+
+.submit-btn-container{
     margin-top : 2rem;
 }
 
-.quiz-form-container{
-    margin-top : 2rem;
+.quiz-title-sticky{
+    position: sticky;
+    top : 6.5rem;
+    z-index : 900;
+    background-color : white;
+    padding : 1rem;
 }

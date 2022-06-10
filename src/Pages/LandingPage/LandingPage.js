@@ -2,7 +2,7 @@ import "./LandingPage.css";
 import { BatmanQuizContainer } from "../../component/Wrapper/BatmanQuizContainer/BatmanQuizContainer";
 import { rulesData } from "../../data/rulesData";
 import { CategoryCard } from "../../component/Cards";
-import { useQuestions } from "../../context/QuestionsContext/QuestionsContext";
+import { useQuestions } from "../../context/QuestionsContext";
 const LandingPage = () => {
   const { questionsState } = useQuestions();
   return (
