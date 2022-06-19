@@ -15,6 +15,10 @@ body{
   /* background-color: var(--background-color); */
 }
 
+input{
+  accent-color: yellow;
+}
+
 p,
 h1,
 h2,

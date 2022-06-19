@@ -11,15 +11,16 @@ const ResultPage = () => {
   const { category, setCategory } = useCategory();
   const { questionsState } = useQuestions();
   const { answerState, setAnswer } = useAnswers();
-  const categoryObj = questionsState.find((obj) => {
-    return obj.categoryName === category;
-  });
+
+  const categoryObj = questionsState.find(
+    (obj) => obj.categoryName === category
+  );
 
   const totalPoints = getTotalPoints(categoryObj.questions, answerState);
 
   const playAgainHandler = () => {
     setCategory("");
-    setAnswer({});
+    setAnswer({ 1: "", 2: "", 3: "", 4: "", 5: "" });
     navigate("/");
   };
 
@@ -30,10 +31,7 @@ const ResultPage = () => {
           <h2>{category}</h2>
         </div>
         <div className="flex-row justify-center-flex align-center-flex">
-          <h2>
-            Total : {totalPoints}
-            /10
-          </h2>
+          <h2>Total : {totalPoints}/10</h2>
         </div>
         <div className="flex-row justify-center-flex align-center-flex">
           <h2>Solutions</h2>
@@ -54,7 +52,7 @@ const ResultPage = () => {
               rel="noreferrer"
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 `Hey 👋 everyone, I scored ${totalPoints} out of 10 on the ${category} quiz.
-              
+
 Let's see how much you will score? Play today styling is yet to be done 😅 it is in the deploy...`
               )}&url=${encodeURIComponent("testing")}&via=DipenChavda2`}
             >
@@ -68,3 +66,5 @@ Let's see how much you will score? Play today styling is yet to be done 😅 it 
 };
 
 export { ResultPage };
+
+//   totalPoints

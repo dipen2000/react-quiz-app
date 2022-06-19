@@ -19,18 +19,30 @@ const AnswerCard = ({ question }) => {
           </div>
           <div className="flex-row align-center-flex gap-1">
             <span>Your answer : </span>
-            <span
-              style={{
-                backgroundColor:
-                  question.answer === answerState[question.number]
-                    ? "#5FD068"
-                    : "#FD5D5D",
-                color: "black",
-              }}
-              className="answer-container"
-            >
-              {answerState[question.number]}
-            </span>
+            {answerState[question.number] === "" ? (
+              <span
+                style={{
+                  backgroundColor: "#F9D923",
+                  color: "black",
+                }}
+                className="answer-container"
+              >
+                Not attempted
+              </span>
+            ) : (
+              <span
+                style={{
+                  backgroundColor:
+                    question.answer === answerState[question.number]
+                      ? "#5FD068"
+                      : "#FD5D5D",
+                  color: "black",
+                }}
+                className="answer-container"
+              >
+                {answerState[question.number]}
+              </span>
+            )}
           </div>
         </div>
       </div>

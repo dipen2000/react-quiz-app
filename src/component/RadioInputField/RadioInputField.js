@@ -8,6 +8,7 @@ const RadioInputField = ({ option, number }) => {
       return { ...prevState, [name]: value };
     });
   };
+
   return (
     <div className="option flex-row gap-1 align-center-flex">
       <input
@@ -16,7 +17,7 @@ const RadioInputField = ({ option, number }) => {
         id={option.id}
         onChange={inputChangeHandler}
         value={option.option}
-        checked={answerState.number}
+        checked={option.option === answerState[number]}
         required
       />
       <label htmlFor={option.id}>{option.option}</label>

@@ -5,7 +5,10 @@ const NavRoutes = () => {
   return (
     <Routes>
       <Route path="/" element={<LandingPage />} />
-      <Route path="/category/:categoryName" element={<Quiz />} />
+      <Route
+        path="/quiz/category/:categoryName/question/:questionNum"
+        element={<Quiz />}
+      />
       <Route path="/result" element={<ResultPage />} />
     </Routes>
   );

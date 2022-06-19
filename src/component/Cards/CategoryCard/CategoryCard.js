@@ -5,11 +5,12 @@ const CategoryCard = ({ category }) => {
   const { categoryName, categoryDesc, points, imgSrc } = category;
   const { setCategory } = useCategory();
   const navigate = useNavigate();
+  const questionNum = "1";
   return (
     <div
       onClick={() => {
         setCategory(categoryName);
-        navigate(`/category/${categoryName}`);
+        navigate(`/quiz/category/${categoryName}/question/${questionNum}`);
       }}
       className="flex-col category-card-container  curs-point gap-1"
     >

@@ -1,6 +1,6 @@
 .option{
     padding : 1rem;
-    border-radius: 10px;
+    border-radius : 15px;
+    width : 40rem;
     background-color : var(--primary-color);
-    color : var(--btn-color);
 }
