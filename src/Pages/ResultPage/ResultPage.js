@@ -16,12 +16,15 @@ const ResultPage = () => {
     (obj) => obj.categoryName === category
   );
 
+  console.log(categoryObj);
+
   const totalPoints = getTotalPoints(categoryObj.questions, answerState);
 
   const playAgainHandler = () => {
     setCategory("");
     setAnswer({ 1: "", 2: "", 3: "", 4: "", 5: "" });
     navigate("/");
+    sessionStorage.clear();
   };
 
   return (

@@ -14,7 +14,7 @@ const rulesData = [
   },
   {
     id: uuid(),
-    rule: "You will need to attempt all the questions.",
+    rule: "Each question you are going to get 60s attempt.",
   },
 ];
 

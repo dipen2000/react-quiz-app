@@ -6,7 +6,11 @@ import { RadioInputField } from "../../component/RadioInputField/RadioInputField
 import { useQuestions } from "../../context/QuestionsContext";
 import { useCategory } from "../../context/categoryContext";
 import { useAnswers } from "../../context/answersContext";
+import { useEffect, useState } from "react";
 const Quiz = () => {
+  const [second, setSecond] = useState(
+    Number(sessionStorage.getItem("timer") || "60")
+  );
   const { questionNum, categoryName } = useParams();
   const { setCategory } = useCategory();
   const { setAnswer } = useAnswers();
@@ -24,7 +28,29 @@ const Quiz = () => {
     setCategory("");
     setAnswer({ 1: "", 2: "", 3: "", 4: "", 5: "" });
     navigate("/");
+    sessionStorage.clear();
   };
+
+  useEffect(() => {
+    let timer = setInterval(() => {
+      if (second > 0) {
+        setSecond((prevState) => prevState - 1);
+        sessionStorage.setItem("timer", JSON.stringify(second - 1));
+      } else {
+        if (currentCategory.questions.length === Number(questionNum)) {
+          navigate("/result");
+          sessionStorage.removeItem("timer");
+        } else {
+          navigate(
+            `/quiz/category/${categoryName}/question/${Number(questionNum) + 1}`
+          );
+          setSecond(60);
+          sessionStorage.removeItem("timer");
+        }
+      }
+    }, 1000);
+    return () => clearInterval(timer);
+  }, [second]);
 
   return (
     <BatmanQuizContainer>
@@ -39,6 +65,13 @@ const Quiz = () => {
                 <h3>
                   Question : {questionNum}/{currentCategory.questions.length}
                 </h3>
+                <div
+                  className="flex-row gap-1 align-center-flex timer-section"
+                  style={{ color: second <= 10 ? "#FD5D5D" : "" }}
+                >
+                  <i class="fa-solid fa-hourglass-end"></i>
+                  {second}
+                </div>
                 <button className="submit-btn" onClick={quitQuizHandler}>
                   Quit quiz
                 </button>
@@ -61,34 +94,14 @@ const Quiz = () => {
                   </div>
                 </div>
               </div>
-              <div className="flex-row align-center-flex justify-space-between-flex">
-                {questionNum > 1 ? (
-                  <div
-                    className="quiz-nav-link flex-row gap-1 align-center-flex curs-point"
-                    onClick={() =>
-                      navigate(
-                        `/quiz/category/${categoryName}/question/${
-                          Number(questionNum) - 1
-                        }`
-                      )
-                    }
-                  >
-                    <i className="fa-solid fa-arrow-left"></i>
-                    <h3>Question {Number(questionNum) - 1}</h3>
-                  </div>
-                ) : (
-                  <div
-                    className="quiz-nav-link flex-row gap-1 align-center-flex curs-point"
-                    onClick={() => navigate("/")}
-                  >
-                    <i className="fa-solid fa-arrow-left"></i>
-                    <h3>Home</h3>
-                  </div>
-                )}
+              <div className="flex-row align-center-flex justify-flex-end">
                 {currentCategory.questions.length === Number(questionNum) ? (
                   <div
                     className="quiz-nav-link flex-row gap-1 align-center-flex curs-point"
-                    onClick={() => navigate("/result")}
+                    onClick={() => {
+                      navigate("/result");
+                      sessionStorage.removeItem("timer");
+                    }}
                   >
                     <h3>Result</h3>
                     <i className="fa-solid fa-arrow-right"></i>
@@ -96,13 +109,15 @@ const Quiz = () => {
                 ) : (
                   <div
                     className="quiz-nav-link flex-row gap-1 align-center-flex curs-point"
-                    onClick={() =>
+                    onClick={() => {
                       navigate(
                         `/quiz/category/${categoryName}/question/${
                           Number(questionNum) + 1
                         }`
-                      )
-                    }
+                      );
+                      setSecond(60);
+                      sessionStorage.removeItem("timer");
+                    }}
                   >
                     <h3>Question {Number(questionNum) + 1}</h3>
                     <i className="fa-solid fa-arrow-right"></i>

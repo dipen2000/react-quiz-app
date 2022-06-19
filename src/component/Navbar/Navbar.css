@@ -9,3 +9,9 @@
     top : 0;
     z-index: 800;
 }
+
+.navbar-heading{
+    font-family: 'Staatliches', cursive;
+    font-size: 5rem;
+    letter-spacing: 0.5rem;
+}

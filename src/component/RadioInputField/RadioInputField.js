@@ -7,6 +7,10 @@ const RadioInputField = ({ option, number }) => {
     setAnswer((prevState) => {
       return { ...prevState, [name]: value };
     });
+    sessionStorage.setItem(
+      "answers",
+      JSON.stringify({ ...answerState, [name]: value })
+    );
   };
 
   return (

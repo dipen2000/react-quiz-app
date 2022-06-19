@@ -5,7 +5,9 @@ const CategoryContext = createContext();
 const useCategory = () => useContext(CategoryContext);
 
 const CategoryProvider = ({ children }) => {
-  const [category, setCategory] = useState("");
+  const [category, setCategory] = useState(
+    sessionStorage.getItem("category") || ""
+  );
   return (
     <CategoryContext.Provider value={{ category, setCategory }}>
       {children}

@@ -11,6 +11,7 @@ const CategoryCard = ({ category }) => {
       onClick={() => {
         setCategory(categoryName);
         navigate(`/quiz/category/${categoryName}/question/${questionNum}`);
+        sessionStorage.setItem("category", categoryName);
       }}
       className="flex-col category-card-container  curs-point gap-1"
     >
