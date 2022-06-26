@@ -6,7 +6,6 @@
     border-radius: 15px;
     background-color : var(--post-color);
     padding : 2rem;
-    /* height  : 20rem; */
 }
 
 .quiz-question-section{
@@ -30,28 +29,6 @@
     border-bottom: 3px solid var(--btn-color);
 }
 
-
-
-/* .quiz-title-container{
-    margin-top : 2rem;
-} */
-
-/* .quiz-form-container{
-    
-} */
-/* 
-.submit-btn-container{
-    margin-top : 2rem;
-} */
-
-/* .quiz-title-sticky{
-    position: sticky;
-    top : 6.5rem;
-    z-index : 900;
-    background-color : var(--primary-color);
-    padding : 1rem;
-    border-radius: 10px;
-} */
 
 .submit-btn{
     outline : none;

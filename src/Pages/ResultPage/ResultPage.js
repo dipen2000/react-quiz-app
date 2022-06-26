@@ -16,8 +16,6 @@ const ResultPage = () => {
     (obj) => obj.categoryName === category
   );
 
-  console.log(categoryObj);
-
   const totalPoints = getTotalPoints(categoryObj.questions, answerState);
 
   const playAgainHandler = () => {
@@ -71,5 +69,3 @@ Let's see how much you will score? Play today.`
 };
 
 export { ResultPage };
-
-//   totalPoints
