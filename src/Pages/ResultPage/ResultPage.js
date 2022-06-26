@@ -56,8 +56,10 @@ const ResultPage = () => {
               href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(
                 `Hey 👋 everyone, I scored ${totalPoints} out of 10 on the ${category} quiz.
 
-Let's see how much you will score? Play today styling is yet to be done 😅 it is in the deploy...`
-              )}&url=${encodeURIComponent("testing")}&via=DipenChavda2`}
+Let's see how much you will score? Play today.`
+              )}&url=${encodeURIComponent(
+                "https://batquiz-2.netlify.app/"
+              )}&via=DipenChavda2`}
             >
               Share on twitter
             </a>
