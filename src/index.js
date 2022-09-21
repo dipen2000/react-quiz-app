@@ -7,19 +7,22 @@ import {
   QuestionsProvider,
   CategoryProvider,
   AnswersProvider,
+  AuthProvider,
 } from "./context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <Router>
-      <QuestionsProvider>
-        <CategoryProvider>
-          <AnswersProvider>
-            <App />
-          </AnswersProvider>
-        </CategoryProvider>
-      </QuestionsProvider>
+      <AuthProvider>
+        <QuestionsProvider>
+          <CategoryProvider>
+            <AnswersProvider>
+              <App />
+            </AnswersProvider>
+          </CategoryProvider>
+        </QuestionsProvider>
+      </AuthProvider>
     </Router>
   </React.StrictMode>
 );

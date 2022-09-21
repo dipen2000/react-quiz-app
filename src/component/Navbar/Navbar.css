@@ -1,6 +1,9 @@
 .navbar{
-    padding : 1rem;
+    padding : 0 1rem;
     background-color : var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar-sticky{
@@ -14,3 +17,4 @@
     font-size: 5rem;
     letter-spacing: 0.5rem;
 }
+

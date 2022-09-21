@@ -1,0 +1,46 @@
+.auth-form-container{
+    width : 50%;
+    background-color : var(--post-color);
+    border-radius: 15px;
+    padding : 0.8rem;
+    margin-top : 5rem;
+}
+
+.auth-input-box{
+    width : 35rem;
+    color : var(--btn-color);
+    outline : none;
+    padding :  0.8rem;
+    font-family: var(--component-heading-font);
+    background-color : var(--primary-color);
+    border-radius: 15px;
+    border : 3px solid var(--primary-color);
+}
+
+.link-clr{
+    color : var(--btn-color);
+}
+
+.error-msg-container{
+    padding : 0.5rem;
+    width : 100%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--primary-color);
+    color : var(--error-color);
+    justify-content: center;
+}
+
+.logout-container{
+    gap : 1rem;
+    margin-top : 10rem;
+}
+
+.logout-container i{
+    font-size: 7rem;
+}
+
+.reset-mail-msg{
+    color : var(--btn-color);
+}

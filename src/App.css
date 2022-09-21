@@ -5,6 +5,19 @@
   --post-color : #294842; 
   --btn-color : #fff001;
   --general-font-color : white;
+  --error-color : #ff3333;
+}
+
+::-webkit-scrollbar{
+  width : 0.8rem;
+}
+
+::-webkit-scrollbar-track{
+  background-color: #141213;
+}
+
+::-webkit-scrollbar-thumb{
+  background-color: #fff001;
 }
 
 .flex-row{
@@ -48,12 +61,20 @@
   object-position: center;
 }
 
+.underline{
+  text-decoration: underline;
+}
+
 .mb-1{
   margin-bottom: 1rem;;
 }
 
 .mt-1{
   margin-top: 1rem;
+}
+
+.gap-z-5{
+  gap : 0.5rem;
 }
 
 .gap-1{
@@ -107,4 +128,24 @@
   background-color: var(--primary-color);
   color : var(--general-font-color);
   min-height: 100vh;
+}
+
+.primary-button{
+  outline : none;
+  border : none;
+  color : var(--primary-color);
+  padding : 1rem 2rem;
+  font-size: 1.6rem;
+  border-radius: 20px;
+  font-family: var(--component-heading-font);
+  background-color : var(--btn-color);
+  cursor : pointer;
+}
+
+.primary-button :disabled , .primary-button[disabled]{
+  background-color : #ffee017c;
+}
+
+.error-msg{
+  color : #ff3333;
 }
